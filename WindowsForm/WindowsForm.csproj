@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesktopAppExplorer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DesktopAppExplorer.Designer.cs">
-      <DependentUpon>DesktopAppExplorer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions.cs" />
     <Compile Include="Frm_PasswordValidator.cs">
       <SubType>Form</SubType>
@@ -60,12 +54,8 @@
       <DependentUpon>Frm_PasswordValidator.cs</DependentUpon>
     </Compile>
     <Compile Include="PasswordTools.cs" />
-    <Compile Include="PasswordLevelCheck\PasswordLevel\WORST\GetDescription.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DesktopAppExplorer.resx">
-      <DependentUpon>DesktopAppExplorer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_PasswordValidator.resx">
       <DependentUpon>Frm_PasswordValidator.cs</DependentUpon>
     </EmbeddedResource>
