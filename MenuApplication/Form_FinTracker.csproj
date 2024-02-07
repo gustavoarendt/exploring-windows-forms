@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7115A4ED-0F34-43AC-9E29-A630C38BE0A6}</ProjectGuid>
+    <ProjectGuid>{1813E51A-4B7E-4812-AF07-997787558B6D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsForm</RootNamespace>
-    <AssemblyName>WindowsForm</AssemblyName>
+    <RootNamespace>MenuApplication</RootNamespace>
+    <AssemblyName>MenuApplication</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_PasswordValidator.cs">
+    <Compile Include="FinTracker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_PasswordValidator.Designer.cs">
-      <DependentUpon>Frm_PasswordValidator.cs</DependentUpon>
+    <Compile Include="FinTracker.Designer.cs">
+      <DependentUpon>FinTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Authentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Authentication.Designer.cs">
+      <DependentUpon>Form_Authentication.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_PasswordValidator.resx">
-      <DependentUpon>Frm_PasswordValidator.cs</DependentUpon>
+    <Compile Include="ClienteCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClienteCadastro.Designer.cs">
+      <DependentUpon>ClienteCadastro.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FinTracker.resx">
+      <DependentUpon>FinTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Authentication.resx">
+      <DependentUpon>Form_Authentication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +80,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ClienteCadastro.resx">
+      <DependentUpon>ClienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +103,33 @@
       <Project>{d0829ec1-bb78-44ad-b182-564143f8f80c}</Project>
       <Name>Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheets.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

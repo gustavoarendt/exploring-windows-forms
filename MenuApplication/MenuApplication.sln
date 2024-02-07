@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForm", "WindowsForm.csproj", "{7115A4ED-0F34-43AC-9E29-A630C38BE0A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_FinTracker", "Form_FinTracker.csproj", "{1813E51A-4B7E-4812-AF07-997787558B6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "..\Utils\Utils.csproj", "{D0829EC1-BB78-44AD-B182-564143F8F80C}"
 EndProject
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7115A4ED-0F34-43AC-9E29-A630C38BE0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7115A4ED-0F34-43AC-9E29-A630C38BE0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7115A4ED-0F34-43AC-9E29-A630C38BE0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7115A4ED-0F34-43AC-9E29-A630C38BE0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1813E51A-4B7E-4812-AF07-997787558B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1813E51A-4B7E-4812-AF07-997787558B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1813E51A-4B7E-4812-AF07-997787558B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1813E51A-4B7E-4812-AF07-997787558B6D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D0829EC1-BB78-44AD-B182-564143F8F80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0829EC1-BB78-44AD-B182-564143F8F80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0829EC1-BB78-44AD-B182-564143F8F80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CFBE6633-3830-454C-A95F-641D5E5509CA}
+		SolutionGuid = {A606F264-3D16-4FD5-9F8D-A8F6F65089DB}
 	EndGlobalSection
 EndGlobal
