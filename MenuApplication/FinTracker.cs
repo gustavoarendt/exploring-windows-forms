@@ -23,6 +23,7 @@ namespace MenuApplication
         private void Menu_ClienteCadastro_Click(object sender, EventArgs e)
         {
             ClienteCadastro clienteCadastro = new ClienteCadastro();
+            clienteCadastro.Dock = DockStyle.Fill;
             TabPage tp = new TabPage
             {
                 Name = "Cliente Cadastro",
