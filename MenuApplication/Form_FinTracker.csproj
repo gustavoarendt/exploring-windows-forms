@@ -67,6 +67,12 @@
     <Compile Include="ClienteCadastro.Designer.cs">
       <DependentUpon>ClienteCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuestionModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionModal.Designer.cs">
+      <DependentUpon>QuestionModal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FinTracker.resx">
       <DependentUpon>FinTracker.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="ClienteCadastro.resx">
       <DependentUpon>ClienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionModal.resx">
+      <DependentUpon>QuestionModal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

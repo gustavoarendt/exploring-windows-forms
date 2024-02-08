@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JsonDatabase\CostumerDb.cs" />
     <Compile Include="Network.cs" />
     <Compile Include="Entities\Costumer.cs" />
     <Compile Include="Entities\ObjectValues\Address.cs" />
@@ -68,5 +69,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

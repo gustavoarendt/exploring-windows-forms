@@ -76,6 +76,7 @@
             this.Txt_Password.PasswordChar = '*';
             this.Txt_Password.Size = new System.Drawing.Size(232, 20);
             this.Txt_Password.TabIndex = 2;
+            this.Txt_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Password_KeyDown);
             // 
             // Btn_Login
             // 

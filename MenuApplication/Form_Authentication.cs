@@ -28,5 +28,13 @@ namespace MenuApplication
                 DialogResult = DialogResult.Abort;
             }
         }
+
+        private void Txt_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Btn_Login_Click(sender, e);
+            }
+        }
     }
 }

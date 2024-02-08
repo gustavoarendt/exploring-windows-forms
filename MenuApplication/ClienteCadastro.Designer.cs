@@ -51,7 +51,10 @@
             this.Txt_FullSalary = new System.Windows.Forms.TextBox();
             this.Lbl_FullSalary = new System.Windows.Forms.Label();
             this.Grp_PersonalData = new System.Windows.Forms.GroupBox();
+            this.Lbl_Code = new System.Windows.Forms.Label();
+            this.Txt_Code = new System.Windows.Forms.TextBox();
             this.Grp_Address = new System.Windows.Forms.GroupBox();
+            this.Txt_Estate = new System.Windows.Forms.TextBox();
             this.Txt_City = new System.Windows.Forms.TextBox();
             this.Lbl_City = new System.Windows.Forms.Label();
             this.Grp_Info = new System.Windows.Forms.GroupBox();
@@ -61,9 +64,6 @@
             this.Menu_FerramentaSave = new System.Windows.Forms.ToolStripButton();
             this.Menu_FerramentaClear = new System.Windows.Forms.ToolStripButton();
             this.Menu_FerramentaDelete = new System.Windows.Forms.ToolStripButton();
-            this.Lbl_Code = new System.Windows.Forms.Label();
-            this.Txt_Code = new System.Windows.Forms.TextBox();
-            this.Txt_Estate = new System.Windows.Forms.TextBox();
             this.Grp_PersonalData.SuspendLayout();
             this.Grp_Address.SuspendLayout();
             this.Grp_Info.SuspendLayout();
@@ -84,7 +84,7 @@
             this.Txt_CPF.Location = new System.Drawing.Point(380, 32);
             this.Txt_CPF.Name = "Txt_CPF";
             this.Txt_CPF.Size = new System.Drawing.Size(267, 20);
-            this.Txt_CPF.TabIndex = 1;
+            this.Txt_CPF.TabIndex = 2;
             // 
             // Txt_FullName
             // 
@@ -109,7 +109,7 @@
             this.Txt_ZipCode.Location = new System.Drawing.Point(9, 32);
             this.Txt_ZipCode.Name = "Txt_ZipCode";
             this.Txt_ZipCode.Size = new System.Drawing.Size(264, 20);
-            this.Txt_ZipCode.TabIndex = 7;
+            this.Txt_ZipCode.TabIndex = 5;
             this.Txt_ZipCode.Leave += new System.EventHandler(this.Txt_ZipCode_Leave);
             // 
             // Lbl_ZipCode
@@ -128,7 +128,7 @@
             this.Txt_MotherName.Location = new System.Drawing.Point(6, 114);
             this.Txt_MotherName.Name = "Txt_MotherName";
             this.Txt_MotherName.Size = new System.Drawing.Size(767, 20);
-            this.Txt_MotherName.TabIndex = 5;
+            this.Txt_MotherName.TabIndex = 4;
             // 
             // Lbl_MotherName
             // 
@@ -203,7 +203,7 @@
             this.Txt_PhoneNumber.Location = new System.Drawing.Point(9, 32);
             this.Txt_PhoneNumber.Name = "Txt_PhoneNumber";
             this.Txt_PhoneNumber.Size = new System.Drawing.Size(264, 20);
-            this.Txt_PhoneNumber.TabIndex = 21;
+            this.Txt_PhoneNumber.TabIndex = 23;
             // 
             // Lbl_PhoneNumber
             // 
@@ -219,7 +219,7 @@
             this.Txt_Job.Location = new System.Drawing.Point(279, 32);
             this.Txt_Job.Name = "Txt_Job";
             this.Txt_Job.Size = new System.Drawing.Size(494, 20);
-            this.Txt_Job.TabIndex = 23;
+            this.Txt_Job.TabIndex = 24;
             // 
             // Lbl_Job
             // 
@@ -265,6 +265,22 @@
             this.Grp_PersonalData.TabStop = false;
             this.Grp_PersonalData.Text = "groupBox1";
             // 
+            // Lbl_Code
+            // 
+            this.Lbl_Code.AutoSize = true;
+            this.Lbl_Code.Location = new System.Drawing.Point(3, 16);
+            this.Lbl_Code.Name = "Lbl_Code";
+            this.Lbl_Code.Size = new System.Drawing.Size(40, 13);
+            this.Lbl_Code.TabIndex = 6;
+            this.Lbl_Code.Text = "Código";
+            // 
+            // Txt_Code
+            // 
+            this.Txt_Code.Location = new System.Drawing.Point(6, 32);
+            this.Txt_Code.Name = "Txt_Code";
+            this.Txt_Code.Size = new System.Drawing.Size(267, 20);
+            this.Txt_Code.TabIndex = 1;
+            // 
             // Grp_Address
             // 
             this.Grp_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -287,6 +303,13 @@
             this.Grp_Address.TabIndex = 27;
             this.Grp_Address.TabStop = false;
             this.Grp_Address.Text = "groupBox2";
+            // 
+            // Txt_Estate
+            // 
+            this.Txt_Estate.Location = new System.Drawing.Point(378, 149);
+            this.Txt_Estate.Name = "Txt_Estate";
+            this.Txt_Estate.Size = new System.Drawing.Size(392, 20);
+            this.Txt_Estate.TabIndex = 22;
             // 
             // Txt_City
             // 
@@ -344,6 +367,7 @@
             this.Menu_FerramentaNew.Size = new System.Drawing.Size(23, 22);
             this.Menu_FerramentaNew.Text = "&Novo";
             this.Menu_FerramentaNew.ToolTipText = "Cadastrar novo cliente";
+            this.Menu_FerramentaNew.Click += new System.EventHandler(this.Menu_FerramentaNew_Click);
             // 
             // Menu_FerramentaOpen
             // 
@@ -354,6 +378,7 @@
             this.Menu_FerramentaOpen.Size = new System.Drawing.Size(23, 22);
             this.Menu_FerramentaOpen.Text = "&Abrir";
             this.Menu_FerramentaOpen.ToolTipText = "Abrir cliente existente";
+            this.Menu_FerramentaOpen.Click += new System.EventHandler(this.Menu_FerramentaOpen_Click);
             // 
             // Menu_FerramentaSave
             // 
@@ -375,6 +400,7 @@
             this.Menu_FerramentaClear.Size = new System.Drawing.Size(23, 22);
             this.Menu_FerramentaClear.Text = "toolStripButton1";
             this.Menu_FerramentaClear.ToolTipText = "Limpar campos do cliente";
+            this.Menu_FerramentaClear.Click += new System.EventHandler(this.Menu_FerramentaClear_Click);
             // 
             // Menu_FerramentaDelete
             // 
@@ -385,29 +411,7 @@
             this.Menu_FerramentaDelete.Size = new System.Drawing.Size(23, 22);
             this.Menu_FerramentaDelete.Text = "toolStripButton2";
             this.Menu_FerramentaDelete.ToolTipText = "Excluir cliente";
-            // 
-            // Lbl_Code
-            // 
-            this.Lbl_Code.AutoSize = true;
-            this.Lbl_Code.Location = new System.Drawing.Point(3, 16);
-            this.Lbl_Code.Name = "Lbl_Code";
-            this.Lbl_Code.Size = new System.Drawing.Size(40, 13);
-            this.Lbl_Code.TabIndex = 6;
-            this.Lbl_Code.Text = "Código";
-            // 
-            // Txt_Code
-            // 
-            this.Txt_Code.Location = new System.Drawing.Point(6, 32);
-            this.Txt_Code.Name = "Txt_Code";
-            this.Txt_Code.Size = new System.Drawing.Size(267, 20);
-            this.Txt_Code.TabIndex = 7;
-            // 
-            // Txt_Estate
-            // 
-            this.Txt_Estate.Location = new System.Drawing.Point(378, 149);
-            this.Txt_Estate.Name = "Txt_Estate";
-            this.Txt_Estate.Size = new System.Drawing.Size(392, 20);
-            this.Txt_Estate.TabIndex = 22;
+            this.Menu_FerramentaDelete.Click += new System.EventHandler(this.Menu_FerramentaDelete_Click);
             // 
             // ClienteCadastro
             // 

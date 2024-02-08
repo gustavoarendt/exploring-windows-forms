@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using Utils.Entities.ObjectValues;
+using Utils.JsonDatabase;
 
 namespace Utils.Entities
 {
@@ -26,7 +28,7 @@ namespace Utils.Entities
         [StringLength(50, ErrorMessage = "O campo Nome Completo deve conter no máximo 50 digitos")]
         public string MotherName { get; set; }
 
-        public Address Address { get; set; }
+        public Address Address { get; set; } = new Address();
 
         public string Job { get; set; }
 
@@ -50,6 +52,50 @@ namespace Utils.Entities
                     sb.AppendLine(error.ErrorMessage);
                 }
                 throw new ValidationException(sb.ToString());
+            }
+        }
+
+        private string Serialize()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
+        public static Costumer Deserialize(string json)
+        {
+            return JsonConvert.DeserializeObject<Costumer>(json);
+        }
+
+        public void Save(CostumerDb db)
+        {
+            if (db.IsSuccess)
+            {
+                string costumerJson = Serialize();
+                db.Include(Id, costumerJson);
+                if (!db.IsSuccess)
+                {
+                    throw new Exception(db.Message);
+                }
+            }
+            else
+            {
+                throw new Exception(db.Message);
+            }
+        }
+
+        public void Update(CostumerDb db)
+        {
+            if (db.IsSuccess)
+            {
+                string costumerJson = Serialize();
+                db.Update(Id, costumerJson);
+                if (!db.IsSuccess)
+                {
+                    throw new Exception(db.Message);
+                }
+            }
+            else
+            {
+                throw new Exception(db.Message);
             }
         }
     }
