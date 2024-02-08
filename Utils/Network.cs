@@ -1,28 +1,18 @@
-﻿using System.IO;
-using System.Net;
-using System.Text;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Utils
 {
     public static class Network
     {
-        public static string GetAddressJsonViaCep(string cep)
+        public static async Task<string> GetAddressJsonViaCep(string cep)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"https://viacep.com.br/ws/{cep}/json/");
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            int cont;
-            byte[] buffer = new byte[1024];
-            StringBuilder sb = new StringBuilder();
-            string temp;
-            Stream stream = response.GetResponseStream();
-            do
+            using (var httpClient = new HttpClient())
             {
-                cont = stream.Read(buffer, 0, buffer.Length);
-                temp = Encoding.Default.GetString(buffer, 0, cont).Trim();
-                sb.Append(temp);
-            } while (cont > 0);
-            return sb.ToString();
+                var response = await httpClient.GetAsync($"https://viacep.com.br/ws/{cep}/json/");
+                response.EnsureSuccessStatusCode();
+                return await response.Content.ReadAsStringAsync();
+            }
         }
     }
 }

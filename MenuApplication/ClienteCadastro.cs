@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utils;
 using Utils.Entities;
@@ -68,14 +69,14 @@ namespace Form_ClienteCadastro
             }
         }
 
-        private void Txt_ZipCode_Leave(object sender, EventArgs e)
+        private async void Txt_ZipCode_Leave(object sender, EventArgs e)
         {
             var cep = Txt_ZipCode.Text;
             if (cep.Length == 8)
             {
                 if (cep.All(char.IsNumber))
                 {
-                    var responseViaCep = Network.GetAddressJsonViaCep(cep);
+                    var responseViaCep = await Network.GetAddressJsonViaCep(cep);
                     var viaCep = ViaCep.Deserialize(responseViaCep);
                     if (responseViaCep != null)
                     {
