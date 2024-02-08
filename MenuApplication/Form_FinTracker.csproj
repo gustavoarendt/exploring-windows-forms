@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -130,6 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cleaning.png" />
+    <Content Include="Resources\remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteCadastro));
             this.Lbl_CPF = new System.Windows.Forms.Label();
             this.Txt_CPF = new System.Windows.Forms.TextBox();
             this.Txt_FullName = new System.Windows.Forms.TextBox();
@@ -51,19 +52,28 @@
             this.Lbl_FullSalary = new System.Windows.Forms.Label();
             this.Grp_PersonalData = new System.Windows.Forms.GroupBox();
             this.Grp_Address = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_City = new System.Windows.Forms.TextBox();
             this.Lbl_City = new System.Windows.Forms.Label();
             this.Grp_Info = new System.Windows.Forms.GroupBox();
-            this.Cbx_Estate = new System.Windows.Forms.ComboBox();
+            this.Menu_Ferramentas = new System.Windows.Forms.ToolStrip();
+            this.Menu_FerramentaNew = new System.Windows.Forms.ToolStripButton();
+            this.Menu_FerramentaOpen = new System.Windows.Forms.ToolStripButton();
+            this.Menu_FerramentaSave = new System.Windows.Forms.ToolStripButton();
+            this.Menu_FerramentaClear = new System.Windows.Forms.ToolStripButton();
+            this.Menu_FerramentaDelete = new System.Windows.Forms.ToolStripButton();
+            this.Lbl_Code = new System.Windows.Forms.Label();
+            this.Txt_Code = new System.Windows.Forms.TextBox();
+            this.Txt_Estate = new System.Windows.Forms.TextBox();
             this.Grp_PersonalData.SuspendLayout();
             this.Grp_Address.SuspendLayout();
             this.Grp_Info.SuspendLayout();
+            this.Menu_Ferramentas.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_CPF
             // 
             this.Lbl_CPF.AutoSize = true;
-            this.Lbl_CPF.Location = new System.Drawing.Point(3, 17);
+            this.Lbl_CPF.Location = new System.Drawing.Point(377, 16);
             this.Lbl_CPF.Name = "Lbl_CPF";
             this.Lbl_CPF.Size = new System.Drawing.Size(27, 13);
             this.Lbl_CPF.TabIndex = 0;
@@ -71,7 +81,7 @@
             // 
             // Txt_CPF
             // 
-            this.Txt_CPF.Location = new System.Drawing.Point(6, 33);
+            this.Txt_CPF.Location = new System.Drawing.Point(380, 32);
             this.Txt_CPF.Name = "Txt_CPF";
             this.Txt_CPF.Size = new System.Drawing.Size(267, 20);
             this.Txt_CPF.TabIndex = 1;
@@ -100,6 +110,7 @@
             this.Txt_ZipCode.Name = "Txt_ZipCode";
             this.Txt_ZipCode.Size = new System.Drawing.Size(264, 20);
             this.Txt_ZipCode.TabIndex = 7;
+            this.Txt_ZipCode.Leave += new System.EventHandler(this.Txt_ZipCode_Leave);
             // 
             // Lbl_ZipCode
             // 
@@ -239,13 +250,15 @@
             // 
             this.Grp_PersonalData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grp_PersonalData.Controls.Add(this.Lbl_Code);
+            this.Grp_PersonalData.Controls.Add(this.Txt_Code);
             this.Grp_PersonalData.Controls.Add(this.Lbl_CPF);
             this.Grp_PersonalData.Controls.Add(this.Txt_CPF);
             this.Grp_PersonalData.Controls.Add(this.Lbl_FullName);
             this.Grp_PersonalData.Controls.Add(this.Txt_FullName);
             this.Grp_PersonalData.Controls.Add(this.Lbl_MotherName);
             this.Grp_PersonalData.Controls.Add(this.Txt_MotherName);
-            this.Grp_PersonalData.Location = new System.Drawing.Point(8, 3);
+            this.Grp_PersonalData.Location = new System.Drawing.Point(8, 40);
             this.Grp_PersonalData.Name = "Grp_PersonalData";
             this.Grp_PersonalData.Size = new System.Drawing.Size(776, 141);
             this.Grp_PersonalData.TabIndex = 26;
@@ -256,8 +269,8 @@
             // 
             this.Grp_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Grp_Address.Controls.Add(this.Cbx_Estate);
-            this.Grp_Address.Controls.Add(this.textBox1);
+            this.Grp_Address.Controls.Add(this.Txt_Estate);
+            this.Grp_Address.Controls.Add(this.Txt_City);
             this.Grp_Address.Controls.Add(this.Lbl_City);
             this.Grp_Address.Controls.Add(this.Txt_ZipCode);
             this.Grp_Address.Controls.Add(this.Lbl_ZipCode);
@@ -268,19 +281,19 @@
             this.Grp_Address.Controls.Add(this.Lbl_District);
             this.Grp_Address.Controls.Add(this.Txt_District);
             this.Grp_Address.Controls.Add(this.Lbl_Estate);
-            this.Grp_Address.Location = new System.Drawing.Point(8, 150);
+            this.Grp_Address.Location = new System.Drawing.Point(8, 190);
             this.Grp_Address.Name = "Grp_Address";
             this.Grp_Address.Size = new System.Drawing.Size(776, 177);
             this.Grp_Address.TabIndex = 27;
             this.Grp_Address.TabStop = false;
             this.Grp_Address.Text = "groupBox2";
             // 
-            // textBox1
+            // Txt_City
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 149);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(364, 20);
-            this.textBox1.TabIndex = 21;
+            this.Txt_City.Location = new System.Drawing.Point(9, 149);
+            this.Txt_City.Name = "Txt_City";
+            this.Txt_City.Size = new System.Drawing.Size(364, 20);
+            this.Txt_City.TabIndex = 21;
             // 
             // Lbl_City
             // 
@@ -301,37 +314,121 @@
             this.Grp_Info.Controls.Add(this.Txt_FullSalary);
             this.Grp_Info.Controls.Add(this.Txt_Job);
             this.Grp_Info.Controls.Add(this.Lbl_FullSalary);
-            this.Grp_Info.Location = new System.Drawing.Point(8, 334);
+            this.Grp_Info.Location = new System.Drawing.Point(8, 375);
             this.Grp_Info.Name = "Grp_Info";
             this.Grp_Info.Size = new System.Drawing.Size(776, 101);
             this.Grp_Info.TabIndex = 28;
             this.Grp_Info.TabStop = false;
             this.Grp_Info.Text = "groupBox1";
             // 
-            // Cbx_Estate
+            // Menu_Ferramentas
             // 
-            this.Cbx_Estate.FormattingEnabled = true;
-            this.Cbx_Estate.Location = new System.Drawing.Point(380, 149);
-            this.Cbx_Estate.Name = "Cbx_Estate";
-            this.Cbx_Estate.Size = new System.Drawing.Size(390, 21);
-            this.Cbx_Estate.TabIndex = 22;
+            this.Menu_Ferramentas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_FerramentaNew,
+            this.Menu_FerramentaOpen,
+            this.Menu_FerramentaSave,
+            this.Menu_FerramentaClear,
+            this.Menu_FerramentaDelete});
+            this.Menu_Ferramentas.Location = new System.Drawing.Point(0, 0);
+            this.Menu_Ferramentas.Name = "Menu_Ferramentas";
+            this.Menu_Ferramentas.Size = new System.Drawing.Size(800, 25);
+            this.Menu_Ferramentas.TabIndex = 29;
+            this.Menu_Ferramentas.Text = "toolStrip1";
+            // 
+            // Menu_FerramentaNew
+            // 
+            this.Menu_FerramentaNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Menu_FerramentaNew.Image = ((System.Drawing.Image)(resources.GetObject("Menu_FerramentaNew.Image")));
+            this.Menu_FerramentaNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Menu_FerramentaNew.Name = "Menu_FerramentaNew";
+            this.Menu_FerramentaNew.Size = new System.Drawing.Size(23, 22);
+            this.Menu_FerramentaNew.Text = "&Novo";
+            this.Menu_FerramentaNew.ToolTipText = "Cadastrar novo cliente";
+            // 
+            // Menu_FerramentaOpen
+            // 
+            this.Menu_FerramentaOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Menu_FerramentaOpen.Image = ((System.Drawing.Image)(resources.GetObject("Menu_FerramentaOpen.Image")));
+            this.Menu_FerramentaOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Menu_FerramentaOpen.Name = "Menu_FerramentaOpen";
+            this.Menu_FerramentaOpen.Size = new System.Drawing.Size(23, 22);
+            this.Menu_FerramentaOpen.Text = "&Abrir";
+            this.Menu_FerramentaOpen.ToolTipText = "Abrir cliente existente";
+            // 
+            // Menu_FerramentaSave
+            // 
+            this.Menu_FerramentaSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Menu_FerramentaSave.Image = ((System.Drawing.Image)(resources.GetObject("Menu_FerramentaSave.Image")));
+            this.Menu_FerramentaSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Menu_FerramentaSave.Name = "Menu_FerramentaSave";
+            this.Menu_FerramentaSave.Size = new System.Drawing.Size(23, 22);
+            this.Menu_FerramentaSave.Text = "&Salvar";
+            this.Menu_FerramentaSave.ToolTipText = "Atualizar cliente";
+            this.Menu_FerramentaSave.Click += new System.EventHandler(this.Menu_FerramentaSave_Click);
+            // 
+            // Menu_FerramentaClear
+            // 
+            this.Menu_FerramentaClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Menu_FerramentaClear.Image = global::MenuApplication.Properties.Resources.cleaning;
+            this.Menu_FerramentaClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Menu_FerramentaClear.Name = "Menu_FerramentaClear";
+            this.Menu_FerramentaClear.Size = new System.Drawing.Size(23, 22);
+            this.Menu_FerramentaClear.Text = "toolStripButton1";
+            this.Menu_FerramentaClear.ToolTipText = "Limpar campos do cliente";
+            // 
+            // Menu_FerramentaDelete
+            // 
+            this.Menu_FerramentaDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Menu_FerramentaDelete.Image = global::MenuApplication.Properties.Resources.remove;
+            this.Menu_FerramentaDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Menu_FerramentaDelete.Name = "Menu_FerramentaDelete";
+            this.Menu_FerramentaDelete.Size = new System.Drawing.Size(23, 22);
+            this.Menu_FerramentaDelete.Text = "toolStripButton2";
+            this.Menu_FerramentaDelete.ToolTipText = "Excluir cliente";
+            // 
+            // Lbl_Code
+            // 
+            this.Lbl_Code.AutoSize = true;
+            this.Lbl_Code.Location = new System.Drawing.Point(3, 16);
+            this.Lbl_Code.Name = "Lbl_Code";
+            this.Lbl_Code.Size = new System.Drawing.Size(40, 13);
+            this.Lbl_Code.TabIndex = 6;
+            this.Lbl_Code.Text = "Código";
+            // 
+            // Txt_Code
+            // 
+            this.Txt_Code.Location = new System.Drawing.Point(6, 32);
+            this.Txt_Code.Name = "Txt_Code";
+            this.Txt_Code.Size = new System.Drawing.Size(267, 20);
+            this.Txt_Code.TabIndex = 7;
+            // 
+            // Txt_Estate
+            // 
+            this.Txt_Estate.Location = new System.Drawing.Point(378, 149);
+            this.Txt_Estate.Name = "Txt_Estate";
+            this.Txt_Estate.Size = new System.Drawing.Size(392, 20);
+            this.Txt_Estate.TabIndex = 22;
             // 
             // ClienteCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Menu_Ferramentas);
             this.Controls.Add(this.Grp_Info);
             this.Controls.Add(this.Grp_Address);
             this.Controls.Add(this.Grp_PersonalData);
             this.Name = "ClienteCadastro";
-            this.Size = new System.Drawing.Size(800, 447);
+            this.Size = new System.Drawing.Size(800, 483);
             this.Grp_PersonalData.ResumeLayout(false);
             this.Grp_PersonalData.PerformLayout();
             this.Grp_Address.ResumeLayout(false);
             this.Grp_Address.PerformLayout();
             this.Grp_Info.ResumeLayout(false);
             this.Grp_Info.PerformLayout();
+            this.Menu_Ferramentas.ResumeLayout(false);
+            this.Menu_Ferramentas.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -361,8 +458,16 @@
         private System.Windows.Forms.GroupBox Grp_PersonalData;
         private System.Windows.Forms.GroupBox Grp_Address;
         private System.Windows.Forms.GroupBox Grp_Info;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_City;
         private System.Windows.Forms.Label Lbl_City;
-        private System.Windows.Forms.ComboBox Cbx_Estate;
+        private System.Windows.Forms.ToolStrip Menu_Ferramentas;
+        private System.Windows.Forms.ToolStripButton Menu_FerramentaNew;
+        private System.Windows.Forms.ToolStripButton Menu_FerramentaOpen;
+        private System.Windows.Forms.ToolStripButton Menu_FerramentaSave;
+        private System.Windows.Forms.ToolStripButton Menu_FerramentaClear;
+        private System.Windows.Forms.ToolStripButton Menu_FerramentaDelete;
+        private System.Windows.Forms.Label Lbl_Code;
+        private System.Windows.Forms.TextBox Txt_Code;
+        private System.Windows.Forms.TextBox Txt_Estate;
     }
 }
